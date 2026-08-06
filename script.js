@@ -16,9 +16,20 @@ if (openBtn) {
 
         // Tampilkan isi undangan
         mainContent.style.display = "block";
-if (bgMusic) {
-    bgMusic.play().catch(() => {});
-}
+
+        // Putar musik
+        if (bgMusic) {
+            bgMusic.volume = 0.5;
+
+            bgMusic.play()
+                .then(() => {
+                    console.log("Musik berhasil diputar");
+                })
+                .catch((err) => {
+                    console.error("Gagal memutar musik:", err);
+                });
+        }
+
         // Scroll ke atas
         window.scrollTo({
             top: 0,
