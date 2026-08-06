@@ -237,7 +237,7 @@ button:hover{
 
 }
 
-section{
+section:not(#cover){
 
     max-width:900px;
 
