@@ -319,53 +319,46 @@ section:not(#cover){
 }
 
 #countdown{
-
     display:flex;
-
     justify-content:center;
-
-    gap:18px;
-
+    align-items:center;
+    gap:22px;
     flex-wrap:wrap;
-
+    margin-top:25px;
 }
 
 .box{
+    width:120px;
+    padding:28px 15px;
+    border-radius:24px;
 
-    width:110px;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
-    background:#F4E4E4;
+    border:1px solid rgba(255,255,255,.6);
 
-    border:1px solid #E8D3D3;
+    box-shadow:0 15px 35px rgba(120,90,90,.15);
 
-    border-radius:20px;
+    transition:.35s;
 
-    padding:22px 10px;
-
-    box-shadow:0 8px 18px rgba(180,140,140,.10);
-
+    font-family:'Poppins',sans-serif;
 }
 
 .box span{
-
     display:block;
-
-    font-size:34px;
-
-    font-weight:bold;
-
-    color:#8C5A5A;
-
+    font-size:42px;
+    font-weight:700;
+    color:#9B6767;
+    margin-bottom:10px;
+    font-family:'Playfair Display',serif;
 }
 
 .box small{
-
-    color:#8A7575;
-
-    letter-spacing:1px;
-
+    font-size:15px;
+    color:#8B6A6A;
     text-transform:uppercase;
-
+    letter-spacing:2px;
 }
 
 /* =====================
