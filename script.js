@@ -5,6 +5,7 @@
 const openBtn = document.getElementById("openBtn");
 const cover = document.getElementById("cover");
 const mainContent = document.getElementById("mainContent");
+const bgMusic = document.getElementById("bgMusic");
 
 if (openBtn) {
 
@@ -15,7 +16,9 @@ if (openBtn) {
 
         // Tampilkan isi undangan
         mainContent.style.display = "block";
-
+if (bgMusic) {
+    bgMusic.play().catch(() => {});
+}
         // Scroll ke atas
         window.scrollTo({
             top: 0,
