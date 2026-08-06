@@ -1,4 +1,7 @@
-// Tombol buka undangan
+// ==============================
+// BUKA UNDANGAN
+// ==============================
+
 const openBtn = document.getElementById("openBtn");
 const cover = document.getElementById("cover");
 const mainContent = document.getElementById("mainContent");
@@ -7,26 +10,24 @@ if (openBtn) {
     openBtn.addEventListener("click", function () {
 
         // Sembunyikan cover
-        if (cover) {
-            cover.style.display = "none";
-        }
+        cover.style.display = "none";
 
         // Tampilkan isi undangan
-        if (mainContent) {
-            mainContent.style.display = "block";
-        }
+        mainContent.style.display = "block";
 
         // Scroll ke atas
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     });
 }
 
-// ======================
-// Countdown
-// ======================
+
+// ==============================
+// COUNTDOWN
+// ==============================
 
 const targetDate = new Date("2026-08-15T19:00:00").getTime();
 
@@ -43,19 +44,13 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (document.getElementById("days"))
-        document.getElementById("days").innerHTML = String(days).padStart(2, "0");
-
-    if (document.getElementById("hours"))
-        document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
-
-    if (document.getElementById("minutes"))
-        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, "0");
-
-    if (document.getElementById("seconds"))
-        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, "0");
+    document.getElementById("days").innerHTML = String(days).padStart(2, "0");
+    document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
+    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, "0");
 }
-
-setInterval(updateCountdown, 1000);
-
+// Jalankan countdown pertama kali
 updateCountdown();
+
+// Perbarui setiap 1 detik
+setInterval(updateCountdown, 1000);
