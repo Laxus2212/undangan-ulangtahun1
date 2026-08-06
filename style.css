@@ -302,6 +302,45 @@ section:not(#cover){
     line-height:1.9;
 
 }
+
+...
+line-height:1.9;
+
+}
+
+/* ==========================
+   HERO CUSTOM
+========================== */
+
+.hero-divider{
+    width:90px;
+    height:2px;
+    background:#D9A8A8;
+    margin:25px auto;
+    border-radius:999px;
+}
+
+.hero-name{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    color:#8C5A5A;
+    margin-bottom:10px;
+}
+
+.hero-age{
+    font-size:22px;
+    color:#B07A7A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero-desc{
+    max-width:650px;
+    margin:auto;
+    line-height:1.9;
+    color:#6F5D5D;
+}
+
 /* =====================
    COUNTDOWN
 ===================== */
